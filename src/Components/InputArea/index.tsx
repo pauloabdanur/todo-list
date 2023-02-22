@@ -1,5 +1,5 @@
 import { useState, KeyboardEvent } from 'react';
-import * as C from './styles';
+import { Container } from './styles';
 
 type Props = {
   onEnter: (taskName: string) => void;
@@ -17,7 +17,7 @@ export const InputArea = ({ onEnter }: Props) => {
   };
 
   return (
-    <C.Container>
+    <Container>
       <div className="image">➕</div>
       <input
         type="text"
@@ -26,6 +26,6 @@ export const InputArea = ({ onEnter }: Props) => {
         onChange={(e) => setInputText(e.target.value)}
         onKeyUp={handleKeyUp}
       />
-    </C.Container>
+    </Container>
   );
 };

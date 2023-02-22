@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import * as C from './App.styles';
+import { Container, Area, Header } from './App.styles';
 import { Item } from './types/Item';
 import { ListItem } from './Components/ListItem';
 import { InputArea } from './Components/InputArea';
@@ -39,17 +39,17 @@ const App = () => {
   };
 
   return (
-    <C.Container>
-      <C.Area>
-        <C.Header>Lista de Tarefas</C.Header>
+    <Container>
+      <Area>
+        <Header>Lista de Tarefas</Header>
 
         <InputArea onEnter={handleAddTask} />
 
         {list.map((item, index) => (
           <ListItem key={index} item={item} onChange={handleChangeTask} />
         ))}
-      </C.Area>
-    </C.Container>
+      </Area>
+    </Container>
   );
 };
 
